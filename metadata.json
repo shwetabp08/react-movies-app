@@ -1,0 +1,6 @@
+{
+  "name": "React Movie App",
+  "description": "A modern cinema React movie application for browsing popular, top-rated, and upcoming movies with trailers, watchlist, and movie details.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

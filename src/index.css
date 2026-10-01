@@ -1,0 +1,146 @@
+:root {
+  --netflix-red: #e50914;
+  --netflix-dark-red: #b81d24;
+  --netflix-black: #141414;
+  --netflix-dark-gray: #181818;
+  --netflix-card-bg: #1f1f1f;
+  --netflix-light-gray: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--netflix-black) !important;
+  color: #fff !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Netflix Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--netflix-red);
+}
+
+/* Netflix Navbar Styling */
+.netflix-navbar-transparent {
+  background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%) !important;
+  backdrop-filter: blur(2px);
+}
+
+.netflix-navbar-scrolled {
+  background-color: rgba(20, 20, 20, 0.96) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+.netflix-logo {
+  transition: transform 0.2s ease;
+}
+.netflix-logo:hover {
+  transform: scale(1.02);
+}
+
+.nav-link {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.nav-link:hover {
+  color: #ffffff !important;
+}
+.nav-link.active-nav {
+  color: #ffffff !important;
+  font-weight: 700;
+  border-bottom: 2px solid var(--netflix-red);
+}
+
+/* Netflix Card Hover Animations */
+.netflix-card-container {
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), z-index 0.3s ease;
+}
+
+.netflix-card-container:hover {
+  transform: scale(1.05) translateY(-4px);
+  z-index: 20;
+}
+
+.netflix-card-container:hover .netflix-card {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9), 0 0 10px rgba(229, 9, 20, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Netflix Row Slider Arrows */
+.netflix-row .netflix-slider-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.2s ease;
+}
+
+.netflix-row:hover .netflix-slider-btn {
+  opacity: 1;
+}
+
+.netflix-slider-btn:hover {
+  background: rgba(20, 20, 20, 0.8) !important;
+  color: var(--netflix-red) !important;
+}
+
+.netflix-row-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Netflix Buttons */
+.netflix-btn-play:hover {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  transform: scale(1.03);
+}
+
+.netflix-btn-info:hover {
+  background-color: rgba(109, 109, 110, 0.45) !important;
+  transform: scale(1.03);
+}
+
+/* Details Page backdrop adjustments */
+.netflix-details-page {
+  background-color: var(--netflix-black);
+}
+
+/* Object Fit Cover Utility */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Search Box Focus State */
+.netflix-search-box.open {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  border-color: #fff !important;
+}
+
+/* Modal Animation */
+.netflix-modal-content {
+  animation: netflixModalFade 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes netflixModalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
